@@ -9,7 +9,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram import F
 from aiogram.filters.command import Command
 from aiogram.enums.parse_mode import ParseMode
-from aiogram.utils.formatting import Bold, Italic, Text
+from aiogram.utils.formatting import Bold, Text
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)  # enable logging
@@ -34,7 +34,6 @@ async def start(message: types.Message) -> None:
     content = Text(
         "Привет, ", Bold(message.from_user.full_name), ". Введи название города, чтобы узнать там погоду"
     )
-
     
     await message.answer(**content.as_kwargs())
 
