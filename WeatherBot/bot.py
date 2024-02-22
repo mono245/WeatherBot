@@ -63,7 +63,7 @@ async def cities_handler(message: types.Message) -> None:
             f"Что-то пошло не так, \n<b>{json_weather['cod']}: {json_weather['message']}</b>"
         )
     else:  # ok request
-        logger.info(f"OK request handled from @{username}, city: {message.text}")
+        logger.info(f"OK request handled from @{username}")
 
         await message.reply(
             f"<b>{json_weather['main']['temp']:.0f}С°</b>, "
