@@ -1,4 +1,4 @@
 .idea
-.venv
+env
 __pycache__
-WeatherBot/.env
+bot/.env
